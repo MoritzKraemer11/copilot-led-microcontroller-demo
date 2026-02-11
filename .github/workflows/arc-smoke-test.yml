@@ -10,4 +10,7 @@ jobs:
       - linux
       - x64
     steps:
-      - run: echo "ARC runner works"
+      - name: Show runner info
+        run: |
+          echo "Runner name: $RUNNER_NAME"
+          uname -a
