@@ -1,0 +1,13 @@
+name: Copilot Setup Steps
+
+on:
+  workflow_dispatch:
+
+jobs:
+  copilot-setup-steps:
+    runs-on: arc-runner-set
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "ARC runner is ready for Copilot"
