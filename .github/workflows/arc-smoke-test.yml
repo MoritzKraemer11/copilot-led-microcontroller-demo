@@ -5,10 +5,9 @@ on:
 
 jobs:
   test:
-    runs-on: arc-runner-set   # <-- GENAU der Name aus Schritt 1
+    runs-on:
+      - self-hosted
+      - linux
+      - x64
     steps:
-      - name: Hello from ARC
-        run: |
-          echo "Runner hostname:"
-          hostname
-          echo "Done."
+      - run: echo "ARC runner works"
