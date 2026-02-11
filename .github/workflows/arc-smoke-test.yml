@@ -5,7 +5,9 @@ on:
 
 jobs:
   test:
-    runs-on: [self-hosted, linux, x64]
+    runs-on:    
+      - self-hosted
+      - arc-runner-set
     steps:
       - name: Show runner info
         run: |
